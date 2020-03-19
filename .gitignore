@@ -3,8 +3,6 @@
 .idea
 *.lst
 *.properties
-.project
-.classpath
 
 # Compiled class file
 *.class
