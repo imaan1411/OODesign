@@ -7,6 +7,7 @@ public class Spiel {
         final Spielfigur spielfigur = new Spielfigur();
         spielfigur.setAktionen(new Bewegend(Bewegend.Richtung.W));
         spielfigur.setAktionen(new Bewegend(Bewegend.Richtung.A));
+        spielfigur.setAktionen(new TrankTrinken(new Heiltrank()));
         spielfigur.aktionAusfuehren();
 
     }
