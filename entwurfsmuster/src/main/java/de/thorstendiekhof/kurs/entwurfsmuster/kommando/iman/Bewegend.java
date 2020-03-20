@@ -30,6 +30,9 @@ public class Bewegend implements Aktion {
             case D:
                 System.out.println("Du bewegst dich nach rechts");
                 break;
+            default:
+                System.out.println("Falsche Eingabe");
         }
+
     }
 }

@@ -5,10 +5,10 @@ public class Spiel {
 
     public static void main(String[] args) {
         final Spielfigur spielfigur = new Spielfigur();
-        spielfigur.setAktionen(new Bewegend(Bewegend.Richtung.W));
-        spielfigur.setAktionen(new Bewegend(Bewegend.Richtung.A));
-        spielfigur.setAktionen(new TrankTrinken(new Heiltrank()));
-        spielfigur.aktionAusfuehren();
+        spielfigur.addAktion(new Bewegend(Bewegend.Richtung.W));
+        spielfigur.addAktion(new Bewegend(Bewegend.Richtung.A));
+        spielfigur.addAktion(new TrankTrinken(new Heiltrank()));
+        spielfigur.aktionenAusfuehren();
 
     }
 }
