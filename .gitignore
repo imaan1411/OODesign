@@ -3,6 +3,7 @@
 .idea
 *.lst
 *.properties
+*.kotlin_module
 
 # Compiled class file
 *.class
