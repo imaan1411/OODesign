@@ -1,4 +1,4 @@
-package de.thorstendiekhof.kurs.entwurfsmuster.beobachter.iman;
+package de.thorstendiekhof.kurs.entwurfsmuster.beobachter.iman.v1;
 
 public interface Subjekt {
     void registriereBeobachter(Beobachter beobachter);

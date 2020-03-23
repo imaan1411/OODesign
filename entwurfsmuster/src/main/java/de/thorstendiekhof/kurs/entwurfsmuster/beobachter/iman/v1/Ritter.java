@@ -1,4 +1,4 @@
-package de.thorstendiekhof.kurs.entwurfsmuster.beobachter.iman;
+package de.thorstendiekhof.kurs.entwurfsmuster.beobachter.iman.v1;
 
 import java.util.ArrayList;
 import java.util.List;
