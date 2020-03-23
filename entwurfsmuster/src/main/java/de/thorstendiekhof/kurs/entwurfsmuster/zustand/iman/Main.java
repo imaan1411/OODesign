@@ -4,17 +4,25 @@ public class Main {
     public static void main(String[] args) {
         KaffeeMaschine kaffeeMaschine = new KaffeeMaschine();
 
+        kaffeeMaschine.toString();
 
-        System.out.println("Aktueller Zustand: " + kaffeeMaschine.aktuellerZustand);
         // Cappuccino zubereiten
         kaffeeMaschine.kaffeeAuswaehlen(1);
-        System.out.println("Aktueller Zustand: " + kaffeeMaschine.aktuellerZustand);
+        // Espresso zubereiten
         kaffeeMaschine.kaffeeAuswaehlen(2);
-        System.out.println("Aktueller Zustand: " + kaffeeMaschine.aktuellerZustand);
         kaffeeMaschine.kaffeeAuswaehlen(1);
-        System.out.println("Aktueller Zustand: " + kaffeeMaschine.aktuellerZustand);
-        kaffeeMaschine.kaffeeAuswaehlen(2);
-        System.out.println("Aktueller Zustand: " + kaffeeMaschine.aktuellerZustand);
+
+        // Wasser auffüllen
+        kaffeeMaschine.wasserNachfuellen();
+        kaffeeMaschine.toString();
+
+        kaffeeMaschine.bohnenNachfuellen();
+        kaffeeMaschine.toString();
+
+
+
+
+
 
     }
 }

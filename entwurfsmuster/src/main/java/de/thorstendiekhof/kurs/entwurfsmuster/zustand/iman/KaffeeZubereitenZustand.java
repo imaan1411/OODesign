@@ -14,21 +14,43 @@ public class KaffeeZubereitenZustand implements Zustand {
 
     @Override
     public void cappuccinoZubereiten() {
-        new Cappuccino().zubereiten();
+        if (checkIfMaschineBereit()) {
+            new Cappuccino().zubereiten();
+            kaffeeMaschine.zustand.warten();
+        }
     }
 
     @Override
     public void espressoZubereiten() {
-        new Espresso().zubereiten();
+        if (kaffeeMaschine.anzahlBohnen == 0) {
+            kaffeeMaschine.zustand = kaffeeMaschine.keineBohnenZustand;
+        }
+
+
+            new Espresso().zubereiten();
+            kaffeeMaschine.zustand.warten();
+
     }
 
     @Override
     public void keineBohnen() {
-        System.out.println("Es kann kein Kaffe zubereitet werden, da es keine Bohnen mehr gibt.");
+        kaffeeMaschine.zustand = kaffeeMaschine.keineBohnenZustand;
     }
 
     @Override
     public void keinWasser() {
-        System.out.println("Es kann kein Kaffe zubereitet werden, da es kein Wasser mehr gibt.");
+        kaffeeMaschine.zustand = kaffeeMaschine.keinWasserZustand;
     }
+
+    private boolean checkIfMaschineBereit() {
+        if (kaffeeMaschine.anzahlBohnen == 0) {
+            kaffeeMaschine.zustand = kaffeeMaschine.keineBohnenZustand;
+            return false;
+        } else if (kaffeeMaschine.wasserInMl == 0) {
+            kaffeeMaschine.zustand.keinWasser();
+            return false;
+        }
+        return true;
+    }
+
 }

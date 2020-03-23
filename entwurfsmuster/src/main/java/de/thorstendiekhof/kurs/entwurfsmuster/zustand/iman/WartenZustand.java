@@ -14,23 +14,21 @@ public class WartenZustand implements Zustand {
 
     @Override
     public void cappuccinoZubereiten() {
-        new Cappuccino().zubereiten();
+        kaffeeMaschine.zustand = kaffeeMaschine.kaffeeZubereitenZustand;
     }
 
     @Override
     public void espressoZubereiten() {
-        new Espresso().zubereiten();
+        kaffeeMaschine.zustand = kaffeeMaschine.kaffeeZubereitenZustand;
     }
 
     @Override
     public void keineBohnen() {
-        System.out.println("Es hat keine Bohnen mehr. Fülle Bohnen nach!");
-
+        kaffeeMaschine.zustand = kaffeeMaschine.keineBohnenZustand;
     }
 
     @Override
     public void keinWasser() {
-        System.out.println("Es hat kein Wasser mehr. Fülle Wasser nach!");
-
+        kaffeeMaschine.zustand = kaffeeMaschine.keinWasserZustand;
     }
 }

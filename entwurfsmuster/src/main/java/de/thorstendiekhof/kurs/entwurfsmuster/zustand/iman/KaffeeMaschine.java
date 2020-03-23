@@ -2,53 +2,51 @@ package de.thorstendiekhof.kurs.entwurfsmuster.zustand.iman;
 
 public class KaffeeMaschine {
     // Zustaende
-    private WartenZustand wartenZustand;
-    private KaffeeZubereitenZustand kaffeeZubereitenZustand;
-    private KeineBohnenZustand keineBohnenZustand;
-    private KeinWasserZustand keinWasserZustand;
+    WartenZustand wartenZustand = new WartenZustand(this);
+    KaffeeZubereitenZustand kaffeeZubereitenZustand = new KaffeeZubereitenZustand(this);
+    KeineBohnenZustand keineBohnenZustand = new KeineBohnenZustand(this);
+    KeinWasserZustand keinWasserZustand = new KeinWasserZustand(this);;
 
-    public int anzahlBohnen = 3;
+    public int anzahlBohnen = 1;
     public int wasserInMl = 2;
 
-    Zustand aktuellerZustand;
+    Zustand zustand;
 
     public KaffeeMaschine(){
-        this.wartenZustand = new WartenZustand(this);
-        this.kaffeeZubereitenZustand = new KaffeeZubereitenZustand(this);
-        this.keinWasserZustand = new KeinWasserZustand(this);
-        this.keineBohnenZustand = new KeineBohnenZustand(this);
-        this.aktuellerZustand = wartenZustand;
+        this.zustand = wartenZustand;
     }
 
     // Cappuccino = 1, Espresso = 2
     public void kaffeeAuswaehlen(int kaffeArt) {
-        if (checkIfMaschineBereit()) {
-            if (kaffeArt == 1) {
-                this.aktuellerZustand = kaffeeZubereitenZustand;
-                kaffeeZubereitenZustand.cappuccinoZubereiten();
-                wasserUndBohnenAbziehen();
-            } else if (kaffeArt == 2) {
-                this.aktuellerZustand = kaffeeZubereitenZustand;
-                kaffeeZubereitenZustand.espressoZubereiten();
-                wasserUndBohnenAbziehen();
-            }
+        if (kaffeArt == 1) {
+            this.zustand.cappuccinoZubereiten();
+        } else if (kaffeArt == 2) {
+            this.zustand.espressoZubereiten();
         }
     }
 
-    private void wasserUndBohnenAbziehen() {
-        wasserInMl--;
-        anzahlBohnen--;
+    public void kaffeemaschineWartetAufInput() {
+        this.zustand.warten();
     }
 
-    private boolean checkIfMaschineBereit() {
-        if (anzahlBohnen == 0) {
-            aktuellerZustand = keineBohnenZustand;
-            return false;
-        } else if (wasserInMl == 0) {
-            aktuellerZustand = keinWasserZustand;
-            return false;
-        }
-        return true;
+    public void wasserNachfuellen() {
+        System.out.println("Wasser wird nachgefüllt");
+        wasserInMl += 3;
+    }
+
+    public void bohnenNachfuellen() {
+        System.out.println("Bohnen werden nachgefüllt");
+        anzahlBohnen += 4;
+    }
+
+
+    @Override
+    public String toString() {
+        System.out.println("\n");
+        zustand.warten();
+        System.out.println("Anzahl Bohnen: " + anzahlBohnen + ", Wasser in ml: " + wasserInMl);
+        System.out.println("\n");
+        return null;
     }
 
 
