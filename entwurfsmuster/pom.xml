@@ -29,7 +29,7 @@
         <configuration>
           <archive>
             <manifest>
-              <mainClass>de.thorstendiekhof.kurs.entwurfsmuster.kommando.praxis.erweiterung.Main</mainClass>
+              <mainClass>de.thorstendiekhof.kurs.entwurfsmuster.command.praxis.erweiterung.Main</mainClass>
             </manifest>
           </archive>
         </configuration>

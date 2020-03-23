@@ -1,6 +1,4 @@
-package de.thorstendiekhof.kurs.entwurfsmuster.kommando.iman;
-
-import de.thorstendiekhof.kurs.entwurfsmuster.kommando.praxis.ausgang.Trank;
+package de.thorstendiekhof.kurs.entwurfsmuster.command.iman;
 
 public class TrankTrinken implements Aktion {
 

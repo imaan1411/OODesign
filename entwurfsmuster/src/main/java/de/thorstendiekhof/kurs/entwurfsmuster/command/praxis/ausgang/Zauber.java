@@ -1,4 +1,4 @@
-package de.thorstendiekhof.kurs.entwurfsmuster.kommando.praxis.ausgang;
+package de.thorstendiekhof.kurs.entwurfsmuster.command.praxis.ausgang;
 
 public enum Zauber implements Gegenstand {
     FEUERBALL("Feuerball","Ein Feuerball trifft die Gegner."),

@@ -1,4 +1,4 @@
-package de.thorstendiekhof.kurs.entwurfsmuster.kommando.iman;
+package de.thorstendiekhof.kurs.entwurfsmuster.command.iman;
 
 public class Bewegend implements Aktion {
     private Richtung richtung;

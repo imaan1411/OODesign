@@ -1,4 +1,4 @@
-package de.thorstendiekhof.kurs.entwurfsmuster.kommando.motivation.ausgang;
+package de.thorstendiekhof.kurs.entwurfsmuster.command.motivation.ausgang;
 
 public class Aktionsleiste {
     public void klickButton(String taste){

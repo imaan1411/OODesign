@@ -1,9 +1,9 @@
-package de.thorstendiekhof.kurs.entwurfsmuster.kommando.praxis.erweiterung;
+package de.thorstendiekhof.kurs.entwurfsmuster.command.praxis.erweiterung;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import de.thorstendiekhof.kurs.entwurfsmuster.kommando.praxis.ausgang.Aktion;
+import de.thorstendiekhof.kurs.entwurfsmuster.command.praxis.ausgang.Aktion;
 
 public class Kombo implements Aktion {
 
