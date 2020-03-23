@@ -1,7 +1,5 @@
 package de.thorstendiekhof.kurs.entwurfsmuster.zustand.iman;
 
-import de.thorstendiekhof.kurs.entwurfsmuster.adapter.praxis.ausgang.Kaffeemaschine;
-
 public class WartenZustand implements Zustand {
     private final KaffeeMaschine kaffeeMaschine;
 
@@ -15,13 +13,13 @@ public class WartenZustand implements Zustand {
     }
 
     @Override
-    public void cappuccinoZubereiten(Cappuccino cappuccino) {
-        cappuccino.zubereiten();
+    public void cappuccinoZubereiten() {
+        new Cappuccino().zubereiten();
     }
 
     @Override
-    public void espressoZubereiten(Espresso espresso) {
-        espresso.zubereiten();
+    public void espressoZubereiten() {
+        new Espresso().zubereiten();
     }
 
     @Override

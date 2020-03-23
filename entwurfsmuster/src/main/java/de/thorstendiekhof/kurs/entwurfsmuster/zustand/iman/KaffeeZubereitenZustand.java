@@ -13,13 +13,13 @@ public class KaffeeZubereitenZustand implements Zustand {
     }
 
     @Override
-    public void cappuccinoZubereiten(Cappuccino cappuccino) {
-        cappuccino.zubereiten();
+    public void cappuccinoZubereiten() {
+        new Cappuccino().zubereiten();
     }
 
     @Override
-    public void espressoZubereiten(Espresso espresso) {
-        espresso.zubereiten();
+    public void espressoZubereiten() {
+        new Espresso().zubereiten();
     }
 
     @Override

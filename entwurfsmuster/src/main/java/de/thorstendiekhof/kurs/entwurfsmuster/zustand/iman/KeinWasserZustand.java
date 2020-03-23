@@ -13,12 +13,12 @@ public class KeinWasserZustand implements Zustand {
     }
 
     @Override
-    public void cappuccinoZubereiten(Cappuccino cappuccino) {
+    public void cappuccinoZubereiten() {
         System.out.println("Kein Wasser! Cappuccino kann nicht zubereitet werden.");
     }
 
     @Override
-    public void espressoZubereiten(Espresso espresso) {
+    public void espressoZubereiten() {
         System.out.println("Kein Wasser! Espresso kann nicht zubereitet werden.");
     }
 

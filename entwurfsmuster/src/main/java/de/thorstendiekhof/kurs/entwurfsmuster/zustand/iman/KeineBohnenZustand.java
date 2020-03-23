@@ -1,7 +1,12 @@
 package de.thorstendiekhof.kurs.entwurfsmuster.zustand.iman;
 
 public class KeineBohnenZustand implements Zustand {
+
     KaffeeMaschine kaffeeMaschine;
+
+    public KeineBohnenZustand(KaffeeMaschine kaffeeMaschine) {
+        this.kaffeeMaschine = kaffeeMaschine;
+    }
 
     @Override
     public void warten() {
@@ -9,12 +14,12 @@ public class KeineBohnenZustand implements Zustand {
     }
 
     @Override
-    public void cappuccinoZubereiten(Cappuccino cappuccino) {
+    public void cappuccinoZubereiten() {
         System.out.println("Keine Bohnen! Du kannst keinen Cappuccino zubereiten");
     }
 
     @Override
-    public void espressoZubereiten(Espresso espresso) {
+    public void espressoZubereiten() {
         System.out.println("Keine Bohnen! Du kannst keinen Espresso zubereiten");
     }
 

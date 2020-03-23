@@ -2,8 +2,8 @@ package de.thorstendiekhof.kurs.entwurfsmuster.zustand.iman;
 
 public interface Zustand {
     void warten();
-    void cappuccinoZubereiten(Cappuccino cappuccino);
-    void espressoZubereiten(Espresso espresso);
+    void cappuccinoZubereiten();
+    void espressoZubereiten();
     void keineBohnen();
     void keinWasser();
 
