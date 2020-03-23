@@ -1,27 +1,29 @@
 package de.thorstendiekhof.kurs.entwurfsmuster.zustand.iman;
 
 public class KaffeeZubereitenZustand implements Zustand {
+
     @Override
     public void warten() {
         System.out.println("Kaffee wird zubereitet!");
     }
 
     @Override
-    public void kaffeZubereiten(KaffeeArt art) {
-        if (new Cappuccino().equals(art)) {
-            new Cappuccino().zubereiten();
-        } else if (new Espresso().equals(art)) {
-            new Espresso().zubereiten();
-        }
+    public void cappuccinoZubereiten(Cappuccino cappuccino) {
+        cappuccino.zubereiten();
+    }
+
+    @Override
+    public void espressoZubereiten(Espresso espresso) {
+        espresso.zubereiten();
     }
 
     @Override
     public void keineBohnen() {
-
+        System.out.println("Es kann kein Kaffe zubereitet werden, da es keine Bohnen mehr gibt.");
     }
 
     @Override
     public void keinWasser() {
-
+        System.out.println("Es kann kein Kaffe zubereitet werden, da es kein Wasser mehr gibt.");
     }
 }
