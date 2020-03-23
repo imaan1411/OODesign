@@ -1,10 +1,10 @@
 package de.thorstendiekhof.kurs.entwurfsmuster.beobachter.iman;
 
-import de.thorstendiekhof.kurs.entwurfsmuster.beobachter.iman.Lebensbalken;
-import de.thorstendiekhof.kurs.entwurfsmuster.beobachter.iman.Ritter;
+import de.thorstendiekhof.kurs.entwurfsmuster.beobachter.iman.v1.Lebensbalken;
+import de.thorstendiekhof.kurs.entwurfsmuster.beobachter.iman.v1.Ritter;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class MainTest {
 
