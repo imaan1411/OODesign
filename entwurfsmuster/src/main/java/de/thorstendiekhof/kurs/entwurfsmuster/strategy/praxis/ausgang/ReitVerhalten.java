@@ -1,0 +1,7 @@
+package de.thorstendiekhof.kurs.entwurfsmuster.strategy.praxis.ausgang;
+
+public class ReitVerhalten implements Bewegungsverhalten {
+	public void bewegen() {
+		System.out.println("Bewegt sich beritten.");
+	}
+}
