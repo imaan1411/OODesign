@@ -1,6 +1,11 @@
 package de.thorstendiekhof.kurs.entwurfsmuster.zustand.iman;
 
 public class KaffeeZubereitenZustand implements Zustand {
+    private KaffeeMaschine kaffeeMaschine;
+
+    public KaffeeZubereitenZustand(KaffeeMaschine kaffeeMaschine) {
+        this.kaffeeMaschine = kaffeeMaschine;
+    }
 
     @Override
     public void warten() {
