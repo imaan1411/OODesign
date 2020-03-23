@@ -5,7 +5,7 @@ public class KaffeeMaschine {
     WartenZustand wartenZustand = new WartenZustand(this);
     KaffeeZubereitenZustand kaffeeZubereitenZustand = new KaffeeZubereitenZustand(this);
     KeineBohnenZustand keineBohnenZustand = new KeineBohnenZustand(this);
-    KeinWasserZustand keinWasserZustand = new KeinWasserZustand(this);;
+    KeinWasserZustand keinWasserZustand = new KeinWasserZustand(this);
 
     public int anzahlBohnen = 1;
     public int wasserInMl = 2;
@@ -30,8 +30,7 @@ public class KaffeeMaschine {
     }
 
     public void wasserNachfuellen() {
-        System.out.println("Wasser wird nachgefüllt");
-        wasserInMl += 3;
+        this.zustand.keinWasser();
     }
 
     public void bohnenNachfuellen() {

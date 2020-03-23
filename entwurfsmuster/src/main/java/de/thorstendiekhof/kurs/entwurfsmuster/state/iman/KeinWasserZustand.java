@@ -29,6 +29,8 @@ public class KeinWasserZustand implements Zustand {
 
     @Override
     public void keinWasser() {
-        System.out.println("Kein Wasser! Fülle Wasser nach!");
+        this.kaffeeMaschine.wasserInMl +=3;
+        System.out.println("Wasser wird aufgefüllt...");
+        this.kaffeeMaschine.zustand = this.kaffeeMaschine.wartenZustand;
     }
 }

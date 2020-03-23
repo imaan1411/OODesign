@@ -25,7 +25,9 @@ public class KeineBohnenZustand implements Zustand {
 
     @Override
     public void keineBohnen() {
-        System.out.println("Keine Bohnen! Fülle Bohnen nach!");
+        this.kaffeeMaschine.anzahlBohnen += 4;
+        System.out.println("Bohnen werden nachgefüllt...");
+        this.kaffeeMaschine.zustand = this.kaffeeMaschine.wartenZustand;
     }
 
     @Override

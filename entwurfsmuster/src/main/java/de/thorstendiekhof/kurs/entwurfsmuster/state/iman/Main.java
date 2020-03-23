@@ -1,15 +1,20 @@
 package de.thorstendiekhof.kurs.entwurfsmuster.state.iman;
 
 public class Main {
+
     public static void main(String[] args) {
         KaffeeMaschine kaffeeMaschine = new KaffeeMaschine();
+        while (kaffeeMaschine != null) {
+            kaffeeMaschine.toString();
 
-        kaffeeMaschine.toString();
+            // Cappuccino zubereiten
+            kaffeeMaschine.kaffeeAuswaehlen(1);
+            kaffeeMaschine.kaffeeAuswaehlen(1);
+            kaffeeMaschine.kaffeeAuswaehlen(1);
 
-        // Cappuccino zubereiten
-        kaffeeMaschine.kaffeeAuswaehlen(1);
+        }
+/*
         // Espresso zubereiten
-        kaffeeMaschine.kaffeeAuswaehlen(2);
         kaffeeMaschine.kaffeeAuswaehlen(1);
 
         // Wasser auffüllen
@@ -18,6 +23,7 @@ public class Main {
 
         kaffeeMaschine.bohnenNachfuellen();
         kaffeeMaschine.toString();
+*/
 
 
 

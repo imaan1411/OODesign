@@ -16,16 +16,14 @@ public class KaffeeZubereitenZustand implements Zustand {
     public void cappuccinoZubereiten() {
         if (checkIfMaschineBereit()) {
             new Cappuccino().zubereiten();
-            kaffeeMaschine.zustand.warten();
+            kaffeeMaschine.wasserInMl--;
+            kaffeeMaschine.anzahlBohnen--;
+            kaffeeMaschine.zustand = kaffeeMaschine.wartenZustand;
         }
     }
 
     @Override
     public void espressoZubereiten() {
-        if (kaffeeMaschine.anzahlBohnen == 0) {
-            kaffeeMaschine.zustand = kaffeeMaschine.keineBohnenZustand;
-        }
-
 
             new Espresso().zubereiten();
             kaffeeMaschine.zustand.warten();
@@ -43,11 +41,11 @@ public class KaffeeZubereitenZustand implements Zustand {
     }
 
     private boolean checkIfMaschineBereit() {
-        if (kaffeeMaschine.anzahlBohnen == 0) {
+        if (0 == kaffeeMaschine.anzahlBohnen) {
             kaffeeMaschine.zustand = kaffeeMaschine.keineBohnenZustand;
             return false;
-        } else if (kaffeeMaschine.wasserInMl == 0) {
-            kaffeeMaschine.zustand.keinWasser();
+        } else if (0 == kaffeeMaschine.wasserInMl) {
+            kaffeeMaschine.zustand = kaffeeMaschine.keinWasserZustand;
             return false;
         }
         return true;
