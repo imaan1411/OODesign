@@ -1,4 +1,4 @@
-package de.thorstendiekhof.kurs.entwurfsmuster.state.iman;
+package de.thorstendiekhof.kurs.entwurfsmuster.state.iman.v1;
 
 public class KaffeeZubereitenZustand implements Zustand {
     private KaffeeMaschine kaffeeMaschine;
