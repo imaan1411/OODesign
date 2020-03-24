@@ -14,13 +14,13 @@ public class KaffeeZubereitenZustand implements Zustand {
 
     @Override
     public void cappuccinoZubereiten() {
+        // naming checkIfMaschineBereit (bohnen und wasser)
         if (checkIfMaschineBereit()) {
             new Cappuccino().zubereiten();
             kaffeeMaschine.wasserInMl--;
             kaffeeMaschine.anzahlBohnen--;
-            kaffeeMaschine.zustand = kaffeeMaschine.wartenZustand;
-            kaffeeMaschine.kaffeemaschineWartetAufInput();
         }
+        // else ?
     }
 
     @Override

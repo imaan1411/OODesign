@@ -21,6 +21,7 @@ public class KaffeeMaschine {
     public void kaffeeAuswaehlen(int kaffeArt) {
         if (kaffeArt == 1) {
             this.zustand.cappuccinoZubereiten();
+
         } else if (kaffeArt == 2) {
             this.zustand.espressoZubereiten();
         }

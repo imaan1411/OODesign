@@ -16,6 +16,10 @@ public class WartenZustand implements Zustand {
     public void cappuccinoZubereiten() {
         kaffeeMaschine.zustand = kaffeeMaschine.kaffeeZubereitenZustand;
         kaffeeMaschine.zustand.cappuccinoZubereiten();
+        kaffeeMaschine.zustand = kaffeeMaschine.wartenZustand;
+        // naming, verb setze kaffemaschine auf wartend
+        kaffeeMaschine.kaffeemaschineWartetAufInput();
+
     }
 
     @Override
