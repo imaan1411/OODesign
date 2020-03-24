@@ -21,5 +21,9 @@ public class Main {
         kaffeeMaschine.cappuccinoAuswaehlen();
         kaffeeMaschine.cappuccinoAuswaehlen();
 
+        kaffeeMaschine.koffeinhaltigesGetraenkAuswaehlen(new Espresso());
+        // Bohnen sind leer :(
+        kaffeeMaschine.bohnenAuffuellen();
+        kaffeeMaschine.koffeinhaltigesGetraenkAuswaehlen(new Espresso());
     }
 }

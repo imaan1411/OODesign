@@ -27,4 +27,14 @@ public class WasserLeerZustand implements Zustand {
     public void bohnenAuffuellen() {
         System.out.println("Das Wasser ist leer! Nicht die Bohnen...");
     }
+
+    @Override
+    public void koffeinhaltigesGetraenkAuswaehlen() {
+
+    }
+
+    @Override
+    public void koffeinhaltigesGetraenkZubereiten(KoffeinhaltigesGetraenk koffeinhaltigesGetraenk) {
+
+    }
 }

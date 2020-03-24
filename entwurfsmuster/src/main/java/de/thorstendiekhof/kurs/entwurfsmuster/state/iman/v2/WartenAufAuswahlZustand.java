@@ -26,4 +26,14 @@ public class WartenAufAuswahlZustand implements Zustand {
     public void bohnenAuffuellen() {
         System.out.println("Wähle Bitte einen Cappuccino aus!");
     }
+
+    @Override
+    public void koffeinhaltigesGetraenkAuswaehlen() {
+        kaffeeMaschine.zustand = kaffeeMaschine.koffeinHaltigesGetraenkZubereitenZustand;
+    }
+
+    @Override
+    public void koffeinhaltigesGetraenkZubereiten(KoffeinhaltigesGetraenk koffeinhaltigesGetraenk) {
+        System.out.println("Wähle Bitte ein koffeinhaltiges Getränk aus!");
+    }
 }

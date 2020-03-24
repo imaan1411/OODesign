@@ -5,4 +5,6 @@ public interface Zustand {
     void cappuccinoZubereiten();
     void wasserAuffuellen();
     void bohnenAuffuellen();
+    void koffeinhaltigesGetraenkAuswaehlen();
+    void koffeinhaltigesGetraenkZubereiten(KoffeinhaltigesGetraenk koffeinhaltigesGetraenk);
 }

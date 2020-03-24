@@ -5,6 +5,7 @@ public class KaffeeMaschine {
     CappuccinoZubereitenZustand cappuccinoZubereitenZustand = new CappuccinoZubereitenZustand(this);
     WartenAufAuswahlZustand wartenAufAuswahlZustand = new WartenAufAuswahlZustand(this);
     WasserLeerZustand wasserLeerZustand = new WasserLeerZustand(this);
+    KoffeinHaltigesGetraenkZubereitenZustand koffeinHaltigesGetraenkZubereitenZustand = new KoffeinHaltigesGetraenkZubereitenZustand(this);
 
     Zustand zustand;
 
@@ -28,7 +29,9 @@ public class KaffeeMaschine {
         zustand.bohnenAuffuellen();
     }
 
-
-
+    public void koffeinhaltigesGetraenkAuswaehlen(KoffeinhaltigesGetraenk getraenk) {
+        zustand.koffeinhaltigesGetraenkAuswaehlen();
+        zustand.koffeinhaltigesGetraenkZubereiten(getraenk);
+    }
 
 }

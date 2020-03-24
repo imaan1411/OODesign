@@ -1,31 +1,30 @@
 package de.thorstendiekhof.kurs.entwurfsmuster.state.iman.v2;
 
-public class BohnenLeerZustand implements Zustand {
+public class KoffeinHaltigesGetraenkZubereitenZustand implements Zustand {
     private KaffeeMaschine kaffeeMaschine;
 
-    public BohnenLeerZustand(KaffeeMaschine kaffeeMaschine) {
+    public KoffeinHaltigesGetraenkZubereitenZustand(KaffeeMaschine kaffeeMaschine) {
         this.kaffeeMaschine = kaffeeMaschine;
     }
 
     @Override
     public void cappuccinoAuswaehlen() {
-        System.out.println("Du kannst keinen Cappuccino auswählen. Die Bohnen sind leer!");
+
     }
 
     @Override
     public void cappuccinoZubereiten() {
+
     }
 
     @Override
     public void wasserAuffuellen() {
-        System.out.println("Die Bohnen sind leer! Nicht das Wasser...");
+
     }
 
     @Override
     public void bohnenAuffuellen() {
-        System.out.println("Die Bohnen sind wieder voll!");
-        this.kaffeeMaschine.anzahlBohnen += 3;
-        this.kaffeeMaschine.zustand = this.kaffeeMaschine.wartenAufAuswahlZustand;
+
     }
 
     @Override
@@ -35,6 +34,12 @@ public class BohnenLeerZustand implements Zustand {
 
     @Override
     public void koffeinhaltigesGetraenkZubereiten(KoffeinhaltigesGetraenk koffeinhaltigesGetraenk) {
-        System.out.println("Du kannst kein koffeinhaltiges Getraenk auswählen. Die Bohnen sind leer!");
+
+        if (koffeinhaltigesGetraenk instanceof Espresso) {
+            new Espresso().zubereiten();
+        } else if (koffeinhaltigesGetraenk instanceof Milchkaffee) {
+            new Milchkaffee().zubereiten();
+        }
+        kaffeeMaschine.zustand = kaffeeMaschine.wartenAufAuswahlZustand;
     }
 }

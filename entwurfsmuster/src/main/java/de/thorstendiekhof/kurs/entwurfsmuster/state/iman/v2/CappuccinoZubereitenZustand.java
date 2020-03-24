@@ -38,4 +38,14 @@ public class CappuccinoZubereitenZustand implements Zustand {
     public void bohnenAuffuellen() {
         System.out.println("Cappuccino wird zubereitet.");
     }
+
+    @Override
+    public void koffeinhaltigesGetraenkAuswaehlen() {
+
+    }
+
+    @Override
+    public void koffeinhaltigesGetraenkZubereiten(KoffeinhaltigesGetraenk koffeinhaltigesGetraenk) {
+
+    }
 }
