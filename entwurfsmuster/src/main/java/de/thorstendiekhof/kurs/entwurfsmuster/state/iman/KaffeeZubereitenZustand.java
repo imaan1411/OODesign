@@ -19,6 +19,7 @@ public class KaffeeZubereitenZustand implements Zustand {
             kaffeeMaschine.wasserInMl--;
             kaffeeMaschine.anzahlBohnen--;
             kaffeeMaschine.zustand = kaffeeMaschine.wartenZustand;
+            kaffeeMaschine.kaffeemaschineWartetAufInput();
         }
     }
 

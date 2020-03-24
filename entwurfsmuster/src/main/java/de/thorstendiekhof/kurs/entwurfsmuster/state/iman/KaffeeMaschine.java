@@ -2,18 +2,19 @@ package de.thorstendiekhof.kurs.entwurfsmuster.state.iman;
 
 public class KaffeeMaschine {
     // Zustaende
-    WartenZustand wartenZustand = new WartenZustand(this);
-    KaffeeZubereitenZustand kaffeeZubereitenZustand = new KaffeeZubereitenZustand(this);
-    KeineBohnenZustand keineBohnenZustand = new KeineBohnenZustand(this);
-    KeinWasserZustand keinWasserZustand = new KeinWasserZustand(this);
+    public WartenZustand wartenZustand = new WartenZustand(this);
+    public KaffeeZubereitenZustand kaffeeZubereitenZustand = new KaffeeZubereitenZustand(this);
+    public KeineBohnenZustand keineBohnenZustand = new KeineBohnenZustand(this);
+    public KeinWasserZustand keinWasserZustand = new KeinWasserZustand(this);
 
     public int anzahlBohnen = 1;
     public int wasserInMl = 2;
 
-    Zustand zustand;
+    public Zustand zustand;
 
     public KaffeeMaschine(){
         this.zustand = wartenZustand;
+        this.zustand.warten();
     }
 
     // Cappuccino = 1, Espresso = 2
@@ -34,6 +35,7 @@ public class KaffeeMaschine {
     }
 
     public void bohnenNachfuellen() {
+        //not implemented
         System.out.println("Bohnen werden nachgefüllt");
         anzahlBohnen += 4;
     }

@@ -9,12 +9,13 @@ public class WartenZustand implements Zustand {
 
     @Override
     public void warten() {
-        System.out.println("Bitte wähle zwischen einem Cappuccino oder einem Espresso.");
+        System.out.println("\n" + "Bitte wähle zwischen einem Cappuccino oder einem Espresso." + " Bohnen: " + kaffeeMaschine.anzahlBohnen + " Wasser: " + kaffeeMaschine.wasserInMl);
     }
 
     @Override
     public void cappuccinoZubereiten() {
         kaffeeMaschine.zustand = kaffeeMaschine.kaffeeZubereitenZustand;
+        kaffeeMaschine.zustand.cappuccinoZubereiten();
     }
 
     @Override
