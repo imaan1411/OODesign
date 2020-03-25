@@ -1,4 +1,4 @@
-package de.thorstendiekhof.kurs.entwurfsmuster.schablonenmethode.praxis.ausgang;
+package de.thorstendiekhof.kurs.entwurfsmuster.template.method.praxis.ausgang;
 
 
 

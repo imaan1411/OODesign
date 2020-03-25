@@ -1,26 +1,28 @@
-package de.thorstendiekhof.kurs.entwurfsmuster.schablonenmethode.praxis.erweiterung;
+package de.thorstendiekhof.kurs.entwurfsmuster.template.method.praxis.erweiterung;
 
 
 
-public class Espresso extends Kaffeespezialitaet{
+public class Kaffee extends Kaffeespezialitaet {
+
 
 	@Override
 	void mahleBohnen() {
-		mahleBohnen(9);
+		mahleBohnen(12);
 	}
 
 	@Override
 	void bereiteMilschschaum() {
+		
 	}
 
 	@Override
 	void brueheKaffee() {
-		brueheKaffee(30);
+		brueheKaffee(200);
 	}
 
 	@Override
 	void reinigeMaschine() {
 		entsorgeTrester();
 	}
-    
+
 }

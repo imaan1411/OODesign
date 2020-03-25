@@ -1,4 +1,4 @@
-package de.thorstendiekhof.kurs.entwurfsmuster.schablonenmethode.motivation.erweiterung;
+package de.thorstendiekhof.kurs.entwurfsmuster.template.method.motivation.erweiterung;
 
 
 

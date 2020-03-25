@@ -1,4 +1,4 @@
-package de.thorstendiekhof.kurs.entwurfsmuster.schablonenmethode.motivation.erweiterung;
+package de.thorstendiekhof.kurs.entwurfsmuster.template.method.motivation.ausgang;
 
 
 
@@ -9,6 +9,7 @@ public class Kaffee implements Kaffeespezialitaet {
         System.out.println("Wasser wird aufgekocht.");
         System.out.println("Kaffee wird mit 200ml Wasser aufgebrüht.");
         System.out.println("Trester wird entsorgt.");
+
     }
 
 }
