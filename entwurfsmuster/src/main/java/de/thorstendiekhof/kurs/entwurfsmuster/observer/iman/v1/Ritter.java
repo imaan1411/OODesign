@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Ritter implements Subjekt {
-    private int lebenspunkte;
+    private int lebenspunkte = 10;
     private List<Beobachter> beobachter = new ArrayList<>();
 
     @Override
@@ -19,9 +19,12 @@ public class Ritter implements Subjekt {
 
     @Override
     public void benachrichtigeBeobachter(int lebenspunkte) {
-        this.lebenspunkte = lebenspunkte;
         this.beobachter.forEach(b -> b.aktualisiere(lebenspunkte));
+    }
 
+    public void chriege() {
+        this.lebenspunkte -= 5;
+        benachrichtigeBeobachter(this.lebenspunkte);
     }
 
     public int getLebenspunkte() {

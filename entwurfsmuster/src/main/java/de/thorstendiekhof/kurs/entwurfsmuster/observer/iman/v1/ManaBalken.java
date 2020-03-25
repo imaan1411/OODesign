@@ -1,6 +1,6 @@
 package de.thorstendiekhof.kurs.entwurfsmuster.observer.iman.v1;
 
-public class Lebensbalken implements Beobachter {
+public class ManaBalken implements Beobachter {
     private int lebenspunkte;
 
     @Override
